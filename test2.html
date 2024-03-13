@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chức năng tăng giảm số lượng</title>
+</head>
+<body>
+    <h1>Chức năng tăng giảm số lượng</h1>
+
+    <div class="quantity-container">
+        <input type="text" class="quantity" value="1">
+        <button class="increase">Tăng</button>
+        <button class="decrease">Giảm</button>
+    </div>
+
+    <div class="quantity-container">
+        <input type="text" class="quantity" value="1">
+        <button class="increase">Tăng</button>
+        <button class="decrease">Giảm</button>
+    </div>
+
+    <div class="quantity-container">
+        <input type="text" class="quantity" value="1">
+        <button class="increase">Tăng</button>
+        <button class="decrease">Giảm</button>
+    </div>
+    <div class="quantity-container">
+        <input type="text" class="quantity" value="1">
+        <button class="increase">Tăng</button>
+        <button class="decrease">Giảm</button>
+    </div>
+    <div class="quantity-container">
+        <input type="text" class="quantity" value="1">
+        <button class="increase">Tăng</button>
+        <button class="decrease">Giảm</button>
+    </div>
+
+    <!-- Có thể thêm nhiều ô nhập số lượng tùy ý -->
+
+    <script>
+        document.addEventListener('click', function(event) {
+            var target = event.target;
+
+            // Kiểm tra xem có phải là nút tăng hoặc giảm không
+            if (target.classList.contains('increase') || target.classList.contains('decrease')) {
+                // Tìm đến phần tử cha có class 'quantity-container'
+                var container = target.closest('.quantity-container');
+
+                // Lấy ô nhập số lượng bên trong container
+                var inputElement = container.querySelector('.quantity');
+                var currentValue = parseInt(inputElement.value);
+
+                // Xử lý tăng hoặc giảm giá trị
+                if (target.classList.contains('increase')) {
+                    inputElement.value = currentValue + 1;
+                } else {
+                    // Đảm bảo giá trị không nhỏ hơn 1
+                    if (currentValue > 1) {
+                        inputElement.value = currentValue - 1;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

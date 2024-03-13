@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 0.7vw;
+}
+.boxcenter{
+    width: 70%;
+    margin: 0 auto;
+}
+.row{
+    float: left;
+    width: 100%;
+}
+.mb{
+    margin-bottom: 20px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mr{
+    margin-right: 2%;
+}
+.menu{
+    background-color: #a0e188;
+    border-radius: 5px;
+}
+.footer{
+    background-color: aquamarine;
+    border: 1px #090 solid;
+    font-size: 0.8vw;
+    color: blue;
+    border-radius: 5px;
+    padding: 20px;
+}
+.boxtitle{
+    color: #333;
+    padding: 10px;
+    background-color: #EEE;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px #CCC solid;
+}
+.boxcontent{
+    border-left: 1px #ccc solid;
+    border-right: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    min-height: 200px;
+    padding: 20px;
+}
+.boxcontent2{
+    border-left: 1px #ccc solid;
+    border-right: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+    background-color: #FFF;
+}
+.boxfooter{
+    padding: 10px;
+    background-color: #EEE;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px #CCC solid;
+    border-right: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+}
+
+.menu ul{
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu ul li{
+    list-style-type: none;
+    display: inline;
+    padding: 0px 15px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+}
+.menu ul li a:hover{
+    color: white;
+    /* font-size: 0.8vw; */
+}
+/*ADMIN*/
+.headeradmin{
+    background-color: #EEE;
+    border: 1px #CCC solid;
+    color: #666;
+    border-radius: 5px;
+    padding: 0px 20px;
+    display: flex;
+    position: relative;
+}
+.headeradmin>h1{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    right: 25%;
+    bottom: 35%;
+    font-size: 2vw;
+}
+.headeradmin img{
+    margin-top: 5px;
+    width: 10%;
+}
+.frmtitle{
+    background-color: #EEE;
+    border: 1px #CCC solid;
+    color: #666;
+    border-radius: 5px;
+    padding: 0px 20px;
+}
+.frmcontent{
+    padding: 20px 0px;
+}
+.frmdsloai table{
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+.frmdsloai table th{
+    padding: 20px;
+    background-color: #ccc;
+}
+input[type="submit" i],[type="reset" i],[type="button" i] {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #333;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+}
+.frmdsloai table .dmfx {
+    line-height: 80px;
+    display: inline-flex;
+    justify-content: center;
+}
+.tbfx {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100px;
+}
+
+.formact {
+    width: 50px;
+    height: 40px;
+}
+/* Sản phẩm biến thể */
+/* thay đổi */
+.flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.flxend {
+    position: relative;
+}
+.flxend input:nth-child(1){
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.flxend input:nth-child(2){
+    position: absolute;
+    right: 80px;
+    bottom: 10px;
+}
+/* thay đổi */
+.title {
+    font-size: 18px !important;
+    text-align: center;
+}
+/* Style form input fields and textarea with rounded border */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 0.7vw; /* Adjust font size */
+    border-radius: 5px; /* Add rounded border */
+}
+
+/* Style file input */
+input[type="file"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Style the submit and reset buttons */
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #333;
+    font-size: 0.7vw; /* Adjust font size */
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Style rounded border for the description textarea */
+textarea {
+    border-radius: 5px; /* Add rounded border */
+}
+
+/* Optional: Style the error/thongbao message */
+/* Style file input and its associated button */
+input[type="file"] {
+    width: 100%;
+    margin-top: 5px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Add rounded border */
+    box-sizing: border-box;
+    font-size: 0.7vw; /* Adjust font size */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Style the "Chọn tệp" button */
+input[type="file"]:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Optional: Style the error/thongbao message */
+.thongbao {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+

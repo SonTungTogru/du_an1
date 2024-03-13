@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantity Selector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <style>
+        /* Thêm CSS để tùy chỉnh giao diện nếu cần */
+        .remote_ct {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .minus-btn, .plus-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        input {
+            width: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="remote_ct" id="remoteContainer"></div>
+
+    <script >
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const remoteContainer = document.getElementById("remoteContainer");
+            const numberOfPairs = 10; // Thay đổi số lượng cặp nếu cần
+        
+            function createQuantitySelectorPair(index) {
+                const container = document.createElement("div");
+                container.innerHTML = `
+                    <button class="minus-btn" onclick="handleMinus(${index})"><i class="fa fa-minus"></i></button>
+                    <input type="number" name="amount${index}" id="amount${index}" value="1">
+                    <button class="plus-btn" onclick="handlePlus(${index})"><i class="fa fa-plus"></i></button>
+                `;
+                remoteContainer.appendChild(container);
+            }
+        
+            // Tạo các cặp nút "minus" và "plus"
+            for (let i = 1; i <= numberOfPairs; i++) {
+                createQuantitySelectorPair(i);
+            }
+        });
+        
+        function handleMinus(index) {
+            const amountInput = document.getElementById(`amount${index}`);
+            let currentValue = parseInt(amountInput.value, 10);
+        
+            if (currentValue > 1) {
+                currentValue--;
+                amountInput.value = currentValue;
+            }
+        }
+        
+        function handlePlus(index) {
+            const amountInput = document.getElementById(`amount${index}`);
+            let currentValue = parseInt(amountInput.value, 10);
+        
+            currentValue++;
+            amountInput.value = currentValue;
+        }
+    </script>
+</body>
+</html>
+

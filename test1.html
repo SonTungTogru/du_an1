@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Định dạng CSS */
+        #quantity {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+    <title>Tăng giảm số lượng</title>
+</head>
+<body>
+    <!-- HTML -->
+    <button onclick="decreaseQuantity()">-</button>
+    <input type="text" id="quantity" value="1">
+    <button onclick="increaseQuantity()">+</button>
+
+    <script>
+        // JavaScript
+        function increaseQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityInput.value);
+            quantityInput.value = currentQuantity + 1;
+        }
+
+        function decreaseQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityInput.value);
+            
+            // Đảm bảo số lượng không bao giờ âm
+            if (currentQuantity > 1) {
+                quantityInput.value = currentQuantity - 1;
+            }
+        }
+    </script>
+</body>
+</html>
